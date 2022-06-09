@@ -33,12 +33,17 @@ namespace CatWorx.BadgeMaker
             // Console.WriteLine("   4   |    {0}", myScoreBoard["fourthInning"]);
             // Console.WriteLine("   5   |    {0}", myScoreBoard["fifthInning"]);
             // Console.WriteLine($"score is {myScoreBoard["firstInning"]}");
-            string[] favFoods = new string[3]{"pizza", "doughnuts", "icecream"};
-            string firstFood = favFoods[0];
-            string secondFood = favFoods[1];
-            string thirdFood = favFoods[2];
-            Console.WriteLine("My favorite foods are {0}, {1}, and {2}", firstFood, secondFood, thirdFood);
-            Console.WriteLine($"I like {firstFood}, {secondFood}, and {thirdFood}");
+            // string[] favFoods = new string[3]{"pizza", "doughnuts", "icecream"};
+            // string firstFood = favFoods[0];
+            // string secondFood = favFoods[1];
+            // string thirdFood = favFoods[2];
+            // Console.WriteLine("My favorite foods are {0}, {1}, and {2}", firstFood, secondFood, thirdFood);
+            // Console.WriteLine($"I like {firstFood}, {secondFood}, and {thirdFood}");
+            List<string> employees = new List<string>() {"adam", "amy"};
+            employees.Add("barbara");
+            employees.Add("billy");
+            Console.WriteLine("My employees include {0}, {1}, {2}, and {3}", employees[0], employees[1], employees[2], employees[3]);
+            Console.WriteLine($"My employees include {employees[3]}, {employees[2]}, {employees[1]}, and {employees[0]}");
         }
     }
 }
