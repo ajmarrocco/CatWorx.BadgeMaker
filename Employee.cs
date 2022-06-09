@@ -2,6 +2,6 @@ namespace CatWorx.BadgeMaker
 {
     class Employee
     {
-        // more to come!
+        public string FirstName;
     }
 }
