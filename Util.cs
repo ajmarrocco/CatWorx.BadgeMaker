@@ -66,6 +66,15 @@ namespace CatWorx.BadgeMaker
             int EMPLOYEE_ID_WIDTH = BADGE_WIDTH;
             int EMPLOYEE_ID_HEIGHT = 100;
 
+            // Graphics objects
+            StringFormat format = new StringFormat();
+            format.Alignment = StringAlignment.Center;
+            int FONT_SIZE = 32;
+            Font font = new Font("Arial", FONT_SIZE);
+            Font monoFont = new Font("Courier New", FONT_SIZE);
+
+            SolidBrush brush = new SolidBrush(Color.Black);
+
             using(WebClient client = new WebClient())
             {
                 for(int i = 0; i < employees.Count; i++)
