@@ -70,7 +70,9 @@ namespace CatWorx.BadgeMaker
             {
                 for(int i = 0; i < employees.Count; i++)
                 {
-                    
+                    Image photo = Image.FromStream(client.OpenRead(employees[i].GetPhotoUrl()));
+                    Image background = Image.FromFile("badge.png");
+                    background.Save("data/employeeBadge.png");
                 }
             }
         }
