@@ -98,6 +98,19 @@ namespace CatWorx.BadgeMaker
                         ),
                         format
                     );
+                    // Employee Name
+                    graphic.DrawString(
+                        employees[i].GetName(),
+                        font,
+                        brush,
+                        new Rectangle(
+                            EMPLOYEE_NAME_START_X,
+                            EMPLOYEE_NAME_START_Y,
+                            BADGE_WIDTH,
+                            EMPLOYEE_NAME_HEIGHT
+                        ),
+                        format
+                    );
                     badge.Save("data/employeeBadge.png");
                 }
             }
