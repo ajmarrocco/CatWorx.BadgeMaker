@@ -32,5 +32,11 @@ namespace CatWorx.BadgeMaker {
                 }
                 return employees;
         }
+
+        // Gets names from Random User Generator
+        public static List<Employee> GetFromApi() {
+            List<Employee> employees = new List<Employee>();
+            return employees;
+        }
     }
 }
