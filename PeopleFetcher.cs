@@ -38,7 +38,6 @@ namespace CatWorx.BadgeMaker {
 
         // Gets names from Random User Generator
         public static List<Employee> GetFromApi() {
-        // public static void GetFromApi() {
             List<Employee> employees = new List<Employee>();
             using (WebClient client = new WebClient())
             {
