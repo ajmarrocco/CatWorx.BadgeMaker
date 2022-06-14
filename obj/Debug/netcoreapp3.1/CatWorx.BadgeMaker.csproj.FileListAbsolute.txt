@@ -17,3 +17,4 @@ C:\Users\ajmar\OneDrive\Desktop\C#\CatWorx.BadgeMaker\bin\Debug\netcoreapp3.1\ru
 C:\Users\ajmar\OneDrive\Desktop\C#\CatWorx.BadgeMaker\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
 C:\Users\ajmar\OneDrive\Desktop\C#\CatWorx.BadgeMaker\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
 C:\Users\ajmar\OneDrive\Desktop\C#\CatWorx.BadgeMaker\obj\Debug\netcoreapp3.1\CatWorx.BadgeMaker.csproj.CopyComplete
+C:\Users\ajmar\OneDrive\Desktop\C#\CatWorx.BadgeMaker\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

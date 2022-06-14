@@ -1,6 +1,8 @@
 using System;
 using System.Net;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
+
 
 namespace CatWorx.BadgeMaker {
 
@@ -35,16 +37,26 @@ namespace CatWorx.BadgeMaker {
         }
 
         // Gets names from Random User Generator
-        // public static List<Employee> GetFromApi() {
-        public static void GetFromApi() {
+        public static List<Employee> GetFromApi() {
+        // public static void GetFromApi() {
             List<Employee> employees = new List<Employee>();
-            // return employees;
-
             using (WebClient client = new WebClient())
             {
                 // Image example
                 string response = client.DownloadString("https://randomuser.me/api/?results=10&nat=us&inc=name,id,picture");
-                Console.WriteLine(response);
+                JObject json = JObject.Parse(response);
+                foreach (JToken token in json.SelectToken("results")) {
+                    // Parse JSON data
+                    Employee emp = new Employee
+                    (
+                        token.SelectToken("name.first").ToString(),
+                        token.SelectToken("name.last").ToString(),
+                        Int32.Parse(token.SelectToken("id.value").ToString().Replace("-", "")),
+                        token.SelectToken("picture.large").ToString()
+                    );
+                    employees.Add(emp);
+                }
+                return employees;
             }
         }
     }

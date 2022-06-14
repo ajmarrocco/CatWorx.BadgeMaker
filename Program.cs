@@ -8,11 +8,11 @@ namespace CatWorx.BadgeMaker
         static void Main(string[] args)
         {
             // List<Employee> employees = PeopleFetcher.GetEmployees();
-            // List<Employee> employees = PeopleFetcher.GetFromApi();
-            PeopleFetcher.GetFromApi();
-            // Util.PrintEmployees(employees);
-            // Util.MakeCSV(employees);
-            // Util.MakeBadges(employees);
+            List<Employee> employees = PeopleFetcher.GetFromApi();
+            // PeopleFetcher.GetFromApi();
+            Util.PrintEmployees(employees);
+            Util.MakeCSV(employees);
+            Util.MakeBadges(employees);
         }
         
     }
