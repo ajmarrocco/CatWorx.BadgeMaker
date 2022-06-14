@@ -1,4 +1,5 @@
 using System;
+using System.Net;
 using System.Collections.Generic;
 
 namespace CatWorx.BadgeMaker {
@@ -34,9 +35,17 @@ namespace CatWorx.BadgeMaker {
         }
 
         // Gets names from Random User Generator
-        public static List<Employee> GetFromApi() {
+        // public static List<Employee> GetFromApi() {
+        public static void GetFromApi() {
             List<Employee> employees = new List<Employee>();
-            return employees;
+            // return employees;
+
+            using (WebClient client = new WebClient())
+            {
+                // Image example
+                string response = client.DownloadString("https://randomuser.me/api/?results=10&nat=us&inc=name,id,picture");
+                Console.WriteLine(response);
+            }
         }
     }
 }
